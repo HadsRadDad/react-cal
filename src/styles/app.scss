@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: #12121f;
+  color: #eee;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal {
+  width: 80%;
+  margin: 25% auto;
+  height: 40vh;
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 6px 5px 11px 3px rgba(0, 0, 0, 0.88);
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.request {
+  width: 80%;
+  max-width: 1000px;
+  height: 6vh;
+  border-radius: 5px;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.589);
+  box-shadow: 0 0 15px rgba(206, 6, 6, 0.897);
+  color: white;
+  font-size: 2vh;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  background-color: rgba(206, 6, 6, 0.897);
+}
+
+.blue-glow {
+  border: 0.5rem solid rgb(40, 22, 119);
+  box-shadow: 0 0 15px rgba(40, 22, 119, 0.533);
+}
+
+.yellow-glow {
+  border: 0.5rem solid rgb(24, 157, 180);
+  box-shadow: 0 0 15px rgba(24, 157, 180, 0.533);
+}
+
+.yellow-bg {
+  background-color: rgb(24, 157, 180);
+}
+
+.blue-bg {
+  background-color: #281677;
+}
+
+.pink-bg {
+  background-color: rgb(119, 22, 119);
+}
+
+.pink-glow {
+  // border: 2px solid #771677;
+  border: 0.5rem solid #771677;
+  box-shadow: 0 0 15px #771677;
+}
+
+@import "./card";
+@import "./cal";

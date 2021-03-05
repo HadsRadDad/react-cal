@@ -1,0 +1,117 @@
+.calendar {
+  background-color: #222227;
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+  width: 90%;
+  border-radius: 5px;
+  max-width: 600px;
+  margin: 10px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.month {
+  background-color: #167e56;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.date {
+  padding-bottom: 1em;
+  width: 35%;
+}
+
+.days-of-week {
+  display: grid;
+  width: 90%;
+  grid-template-columns: repeat(7, 1fr);
+  /* column-gap: 5px;
+    row-gap: 5px; */
+  justify-content: center;
+  grid-auto-rows: 6vh;
+  grid-auto-flow: row;
+  text-align: center;
+  border-bottom: 0.1rem solid white;
+  div {
+    align-self: center;
+    justify-self: center;
+    padding: 0.5rem;
+    width: 100%;
+    font-weight: 600;
+  }
+}
+
+.days {
+  display: grid;
+  width: 90%;
+  grid-template-columns: repeat(7, 1fr);
+  /* column-gap: 5px;
+    row-gap: 5px; */
+  justify-content: center;
+  grid-auto-rows: 6vh;
+  grid-auto-flow: row;
+  text-align: center;
+  div {
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: solid 5px #222227;
+    border-radius: 10px;
+  }
+  div:hover:not(.today) {
+    background-color: #557015;
+    border: 0.2rem solid #082c1e;
+    cursor: pointer;
+  }
+}
+
+.next,
+.prev {
+  font-size: 200%;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+.today {
+  background-color: #167e56;
+}
+
+.selected {
+  background-color: #475e11;
+}
+
+//   @media only screen and (orientation: landscape) {
+
+//     .calendar{
+//       max-width: 1000px;
+//     }
+
+//     .month {
+
+//     }
+
+//     .days {
+//       grid-template-columns: 3vw 3vw 3vw 3vw 3vw 3vw 3vw;
+//       grid-auto-rows: 3vw;
+//     }
+
+//     .days-of-week {
+//       grid-template-columns: 3vw 3vw 3vw 3vw 3vw 3vw 3vw;
+//     }
+
+//   }
