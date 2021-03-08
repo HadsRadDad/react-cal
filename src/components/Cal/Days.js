@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
 const Days = ({dates, userInfo, setUserInfo, currentWorkingDate}) => {
     const cWorkingMonth = dates.currentWDate.getMonth();
@@ -11,6 +11,35 @@ const Days = ({dates, userInfo, setUserInfo, currentWorkingDate}) => {
     const currentDay = date.toDateString()
 
     const dayArray = dates.daysInCurrentWMonth
+
+    const [isPortrait, setisPortrait] = useState('')
+
+    const buildCalendar = () => {
+        let cal = document.querySelector('.calendar').clientWidth
+        let w = document.querySelector('.days').clientWidth
+
+        if (isPortrait) {
+            document.querySelector('.days').style.gridAutoRows = `${w}px`
+        } else {
+            document.querySelector('.days').style.gridAutoRows = `${
+                w / 8
+            }px`
+            document.querySelector('.days').style.gridTemplateColumns = `repeat(7,${
+                cal / 8
+            }px`
+
+            document.querySelector('.days-of-week').style.gridTemplateColumns = `repeat(7,${
+                cal / 8
+            }px`
+        }
+    };
+
+
+    useEffect(() => {
+        setisPortrait(window.innerWidth < window.innerHeight)
+        buildCalendar()
+
+    }, [])
 
     // returns date string using a day permeter and the current working month and year from state
     const getDayValue = (d) => {
@@ -37,7 +66,13 @@ const Days = ({dates, userInfo, setUserInfo, currentWorkingDate}) => {
     }
 
     return (
+
         <div className="days">
+            {
+            window.addEventListener('orientationchange', () => {
+                window.location.reload()
+            })
+        }
             {
             dayArray.map((day) => {
                 if (getDayValue(day.day) === currentDay) {
@@ -64,7 +99,6 @@ const Days = ({dates, userInfo, setUserInfo, currentWorkingDate}) => {
                     }/>{
                 day.day
             }</div>
-
     })
         } </div>
     )

@@ -39,22 +39,22 @@ html {
   margin-bottom: 10px;
 }
 .request {
-  width: 80%;
-  max-width: 1000px;
-  height: 6vh;
+  width: 60%;
+  max-width: 600px;
+  padding: 1rem;
   border-radius: 5px;
   font-weight: 600;
   border: 1px solid rgba(0, 0, 0, 0.589);
-  box-shadow: 0 0 15px rgba(206, 6, 6, 0.897);
+  box-shadow: 0 0 15px rgba(180, 100, 9, 0.897);
   color: white;
-  font-size: 2vh;
+  font-size: 1.5rem;
   text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
   background-color: rgba(206, 6, 6, 0.897);
 }
 
 .blue-glow {
-  border: 0.5rem solid rgb(40, 22, 119);
-  box-shadow: 0 0 15px rgba(40, 22, 119, 0.533);
+  // border: 0.5rem solid rgb(31, 108, 172);
+  // box-shadow: 0 0 15px rgba(40, 22, 119, 0.533);
 }
 
 .yellow-glow {
@@ -63,22 +63,45 @@ html {
 }
 
 .yellow-bg {
-  background-color: rgb(24, 157, 180);
+  // background-color: rgb(189, 218, 25);
+  border: 3px solid rgb(168, 166, 8);
+  box-shadow: 0 0 5px rgb(168, 166, 8);
 }
 
 .blue-bg {
-  background-color: #281677;
+  // background-color: #281677;
+  border: 3px solid rgb(31, 108, 172);
+  box-shadow: 0 0 5px rgb(31, 108, 172);
 }
 
 .pink-bg {
-  background-color: rgb(119, 22, 119);
+  // background-color: rgb(119, 22, 119);
+  border: 3px solid rgba(40, 173, 107, 0.979);
+  box-shadow: 0 0 5px rgba(40, 173, 107, 0.979);
 }
 
-.pink-glow {
-  // border: 2px solid #771677;
-  border: 0.5rem solid #771677;
-  box-shadow: 0 0 15px #771677;
-}
+// .pink-glow {
+// border: 2px solid #771677;
+// border: 0.5rem solid #581058;
+// box-shadow: 0 0 15px #771677;
+// }
 
+@media only screen and (orientation: landscape) {
+  .App {
+    width: 100vw;
+    height: 100vh;
+    background-color: #12121f;
+    color: #eee;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .button-container {
+    width: 50%;
+  }
+}
 @import "./card";
 @import "./cal";

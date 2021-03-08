@@ -21,8 +21,9 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   text-align: center;
+  font-size: 1rem;
   width: 100%;
-  max-width: 600px;
+  max-height: max-content;
 }
 
 .date {
@@ -33,14 +34,13 @@
 .days-of-week {
   display: grid;
   width: 90%;
-  grid-template-columns: repeat(7, 1fr);
-  /* column-gap: 5px;
-    row-gap: 5px; */
+  grid-template-columns: repeat(7, calc(40vh / 8));
   justify-content: center;
-  grid-auto-rows: 6vh;
+  grid-auto-rows: calc(40vh / 10);
   grid-auto-flow: row;
   text-align: center;
   border-bottom: 0.1rem solid white;
+  grid-column-gap: 0.5em;
   div {
     align-self: center;
     justify-self: center;
@@ -53,13 +53,11 @@
 .days {
   display: grid;
   width: 90%;
-  grid-template-columns: repeat(7, 1fr);
-  /* column-gap: 5px;
-    row-gap: 5px; */
+  grid-template-columns: repeat(7, calc(40vh / 8));
   justify-content: center;
-  grid-auto-rows: 6vh;
   grid-auto-flow: row;
   text-align: center;
+  grid-gap: 0.5em;
   div {
     text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
     transition: background-color 0.2s;
@@ -67,7 +65,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    border: solid 5px #222227;
     border-radius: 10px;
   }
   div:hover:not(.today) {
@@ -95,23 +92,29 @@
   background-color: #475e11;
 }
 
-//   @media only screen and (orientation: landscape) {
+@media only screen and (orientation: landscape) {
+  .calendar {
+    width: 45vw;
+  }
 
-//     .calendar{
-//       max-width: 1000px;
-//     }
+  .days {
+    grid-template-columns: repeat(7, calc(40vw / 8));
+  }
 
-//     .month {
+  //     .month {
 
-//     }
+  //     }
 
-//     .days {
-//       grid-template-columns: 3vw 3vw 3vw 3vw 3vw 3vw 3vw;
-//       grid-auto-rows: 3vw;
-//     }
+  .days-of-week {
+    grid-template-columns: repeat(7, calc(40vw / 8));
+  }
 
-//     .days-of-week {
-//       grid-template-columns: 3vw 3vw 3vw 3vw 3vw 3vw 3vw;
-//     }
+  // .days {
+  //   grid-template-columns: repeat(7, calc(40vw / 8));
+  //   grid-auto-rows: calc(40vw / 8);
+  // }
 
-//   }
+  //     .days-of-week {
+  //       grid-template-columns: 3vw 3vw 3vw 3vw 3vw 3vw 3vw;
+  //     }
+}
