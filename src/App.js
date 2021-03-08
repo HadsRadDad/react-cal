@@ -3,10 +3,10 @@ import Calendar from './components/Cal/Calendar'
 import Cards from './components/Cards/Cards'
 import axios from 'axios'
 import './styles/app.scss'
-
+import {useSelector} from 'react-redux'
 
 function App() {
-
+    const myState = useSelector(state => state.myState)
     const recJSON = JSON.stringify({
         "_id": {
             "$oid": "603dbfefe08d204850dace9c"
